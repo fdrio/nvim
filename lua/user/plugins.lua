@@ -55,11 +55,18 @@ return packer.startup(function(use)
 	use({ "lewis6991/impatient.nvim"})
 	use({ "lukas-reineke/indent-blankline.nvim"})
 	use("folke/which-key.nvim")
-
+  -- Markdown 
+-- install without yarn or npm
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  
 	-- Colorschemes
 	use("lunarvim/darkplus.nvim")
   use("preservim/vim-colors-pencil")
-	-- cmp plugins
+	use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
+  -- cmp plugins
 	use({ "hrsh7th/nvim-cmp"}) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer"}) -- buffer completions
 	use({ "hrsh7th/cmp-path"}) -- path completions
