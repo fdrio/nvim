@@ -41,7 +41,11 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
 	-- My plugins here
-
+  use {
+      's1n7ax/nvim-search-and-replace',
+      config = function() require'nvim-search-and-replace'.setup() end,
+  }
+  use({"mg979/vim-visual-multi"})
 	use({ "wbthomason/packer.nvim"}) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim"}) -- Useful lua functions used by lots of plugins
 	use({ "windwp/nvim-autopairs"}) -- Autopairs, integrates with both cmp and treesitter
@@ -65,6 +69,7 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use("lunarvim/darkplus.nvim")
   use("preservim/vim-colors-pencil")
+  use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
   -- cmp plugins
 	use({ "hrsh7th/nvim-cmp"}) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer"}) -- buffer completions
@@ -72,7 +77,8 @@ return packer.startup(function(use)
 	use({ "saadparwaiz1/cmp_luasnip"}) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp"})
 	use({ "hrsh7th/cmp-nvim-lua"})
-
+  -- Colorizer
+  use({"norcalli/nvim-colorizer.lua"})
 	-- snippets
 	use({ "L3MON4D3/LuaSnip"}) --snippet engine
 	use({ "rafamadriz/friendly-snippets"}) -- a bunch of snippets to use
@@ -89,6 +95,7 @@ return packer.startup(function(use)
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter/playground"
 	})
 
   -- Tabs
