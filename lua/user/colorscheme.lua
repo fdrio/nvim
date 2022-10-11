@@ -1,6 +1,6 @@
 vim.cmd [[
 try
-  colorscheme oxocarbon
+  colorscheme pencil 
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=light
