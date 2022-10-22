@@ -67,12 +67,7 @@ return packer.startup(function(use)
   })
   
 	-- Colorschemes
-	use("lunarvim/darkplus.nvim")
-  use("preservim/vim-colors-pencil")
-  use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
-  use 'marko-cerovac/material.nvim'
-  use 'NLKNguyen/papercolor-theme'
-  --use 'B4mbus/oxocarbon-lua.nvim'
+	use "EdenEast/nightfox.nvim" 
   -- cmp plugins
 	use({ "hrsh7th/nvim-cmp"}) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer"}) -- buffer completions
