@@ -52,12 +52,13 @@ return packer.startup(function(use)
 	use({ "numToStr/Comment.nvim"})
 	use({ "JoosepAlviste/nvim-ts-context-commentstring"})
 	use({ "kyazdani42/nvim-web-devicons"})
-	use({ "kyazdani42/nvim-tree.lua"})
+    use({ "kyazdani42/nvim-tree.lua"})
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim"})
 	use({ "ahmedkhalf/project.nvim"})
 	use({ "lewis6991/impatient.nvim"})
 	use({ "lukas-reineke/indent-blankline.nvim"})
+    use({"jamestthompson3/nvim-remote-containers"})
 	use("folke/which-key.nvim")
   -- Markdown 
 -- install without yarn or npm
@@ -98,7 +99,7 @@ return packer.startup(function(use)
 	})
 
   -- Tabs
-  use({"bling/vim-bufferline"})
+    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
 
