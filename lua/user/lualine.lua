@@ -21,6 +21,25 @@ local colors = {
   grey   = '#303030',
 }
 
+local diff = {
+	"diff",
+	colored = false,
+	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
+  cond = hide_in_width
+}
+
+local diagnostics = {
+	"diagnostics",
+	sources = { "nvim_diagnostic" },
+	sections = { "error", "warn" },
+	symbols = { error = " ", warn = " " },
+	colored = false,
+	update_in_insert = false,
+	always_visible = true,
+}
+
+
+
 local bubbles_theme = {
   normal = {
     a = { fg = colors.black, bg = colors.cyan },
@@ -47,7 +66,7 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {
-      { 'mode', separator = { left = '' }, right_padding = 2 },
+      { 'mode', separator = { left = '', right = ''  }, right_padding = 2 },
     },
     lualine_b = {  'branch', {
         		'filename',
@@ -56,13 +75,13 @@ require('lualine').setup {
       		} },
     lualine_c = { 'fileformat' },
     lualine_x = {},
-    lualine_y = { 'filetype', 'progress' },
+    lualine_y = { 'filetype', diff , diagnostics},
     lualine_z = {
-      { 'location', separator = { right = '' }, left_padding = 2 },
+      'progress', { 'location', separator = { right = '' }, left_padding = 2 }
     },
   },
   inactive_sections = {
-    lualine_a = { 'filename' },
+    lualine_a = { 'filename'  },
     lualine_b = {},
     lualine_c = {},
     lualine_x = {},
