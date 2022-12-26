@@ -77,7 +77,7 @@ require('lualine').setup {
     lualine_x = {},
     lualine_y = { 'filetype', diff , diagnostics},
     lualine_z = {
-      'progress', { 'location', separator = { right = '' }, left_padding = 2 }
+      'location' , { 'progress', separator = { right = '' }, left_padding = 2 }
     },
   },
   inactive_sections = {
