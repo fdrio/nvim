@@ -98,7 +98,7 @@ return packer.startup(function(use)
 	})
 
   -- Tabs
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+    use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'}
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
