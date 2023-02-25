@@ -41,11 +41,11 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
 	-- My plugins here
-  use {
-      's1n7ax/nvim-search-and-replace',
-      config = function() require'nvim-search-and-replace'.setup() end,
-  }
-  use({"mg979/vim-visual-multi"})
+    use {
+          's1n7ax/nvim-search-and-replace',
+          config = function() require'nvim-search-and-replace'.setup() end,
+    }
+    use({"mg979/vim-visual-multi"})
 	use({ "wbthomason/packer.nvim"}) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim"}) -- Useful lua functions used by lots of plugins
 	use({ "windwp/nvim-autopairs"}) -- Autopairs, integrates with both cmp and treesitter
@@ -58,15 +58,23 @@ return packer.startup(function(use)
 	use({ "ahmedkhalf/project.nvim"})
 	use({ "lewis6991/impatient.nvim"})
 	use({ "lukas-reineke/indent-blankline.nvim"})
-    use({"jamestthompson3/nvim-remote-containers"})
 	use("folke/which-key.nvim")
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    })
   -- Markdown 
 -- install without yarn or npm
   use({
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
   })
-  
+
 	-- Colorschemes
 	use "EdenEast/nightfox.nvim" 
   -- cmp plugins
@@ -101,7 +109,7 @@ return packer.startup(function(use)
     use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'}
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
-    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+    use {'tpope/vim-fugitive'}
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
