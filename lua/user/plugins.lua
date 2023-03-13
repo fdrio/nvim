@@ -59,16 +59,8 @@ return packer.startup(function(use)
 	use({ "lewis6991/impatient.nvim"})
 	use({ "lukas-reineke/indent-blankline.nvim"})
 	use("folke/which-key.nvim")
-    use({
-        "kylechui/nvim-surround",
-        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-        config = function()
-            require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
-        end
-    })
-  -- Markdown 
+
+-- Markdown 
 -- install without yarn or npm
   use({
       "iamcco/markdown-preview.nvim",
