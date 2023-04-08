@@ -74,8 +74,8 @@ bufferline.setup {
   },
   highlights = {
     fill = {
-      fg = { attribute = "fg", highlight = "#ff0000" },
-      bg = { attribute = "bg", highlight = "#ff0000" },
+      fg = { attribute = "fg", highlight = "Normal" },
+      bg = { attribute = "bg", highlight = "Normal" },
     },
     background = {
       fg = { attribute = "fg", highlight = "TabLine" },
@@ -97,13 +97,13 @@ bufferline.setup {
       bg = { attribute = "bg", highlight = "TabLine" },
     },
     close_button_visible = {
-      fg = { attribute = "fg", highlight = "TabLine" },
+      fg = { attribute = "fg", highlight = "Normal" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
-    -- close_button_selected = {
-    --   fg = {attribute='fg',highlight='TabLineSel'},
-    --   bg ={attribute='bg',highlight='TabLineSel'}
-    --   },
+     close_button_selected = {
+       fg = {attribute='fg',highlight='Normal'},
+       bg ={attribute='bg',highlight='Normal'}
+    },
 
     tab_selected = {
       fg = { attribute = "fg", highlight = "Normal" },
