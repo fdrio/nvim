@@ -5,6 +5,7 @@ require('nightfox').setup({
 	  comments = "italic",
       keywords = "bold",
       types = "bold",
+	  functions = "bold",
     }
   }
 })
