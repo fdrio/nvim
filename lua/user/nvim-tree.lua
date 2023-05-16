@@ -57,6 +57,6 @@ update_focused_file = {
   view = {
 --    width = 30,
 --    height = 30,
-      side = "left",
+      side = "right",
     },
 }
