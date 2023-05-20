@@ -54,7 +54,7 @@ local bubbles_theme = {
   insert = { a = { fg = colors.white, bg = colors.pink } },
   visual = { a = { fg = colors.white, bg = colors.green } },
   replace = { a = { fg = colors.black, bg = colors.blue } },
-
+  command = { a = { fg = colors.yellow, bg = colors.black } },
   inactive = {
     a = { fg = colors.white, bg = colors.black },
     b = { fg = colors.white, bg = colors.black },
