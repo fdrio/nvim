@@ -14,6 +14,7 @@ end
 local colors = {
   darkblue = '#005577',
   green =  '#007c1b',
+  lightgreen = '#00c161',
   yellow = '#f4bb40',
   blue   = '#80a0ff',
   cyan   = '#79dac8',
@@ -51,10 +52,25 @@ local bubbles_theme = {
     c = { fg = colors.grey, bg = colors.grey },
   },
 
-  insert = { a = { fg = colors.white, bg = colors.pink } },
-  visual = { a = { fg = colors.white, bg = colors.green } },
-  replace = { a = { fg = colors.black, bg = colors.blue } },
-  command = { a = { fg = colors.yellow, bg = colors.black } },
+  insert = { a = { fg = colors.pink, bg = colors.grey },
+    b = { fg = colors.red, bg = colors.black },
+    c = { fg = colors.black, bg = colors.black },
+    },
+  visual = { a = { fg = colors.white, bg = colors.grey }, 
+    b = { fg = colors.lightgreen, bg = colors.black },
+    c = { fg = colors.black, bg = colors.black },
+
+  },
+  replace = { a = { fg = colors.white, bg = colors.grey },
+    b = { fg = colors.cyan, bg = colors.black },
+    c = { fg = colors.black, bg = colors.black },
+
+  },
+  command = { a = { fg = colors.white, bg = colors.grey },
+    b = { fg = colors.yellow, bg = colors.black },
+    c = { fg = colors.black, bg = colors.black },
+
+  },
   inactive = {
     a = { fg = colors.white, bg = colors.black },
     b = { fg = colors.white, bg = colors.black },
@@ -70,7 +86,7 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {
-      { 'mode', separator = { left = '', right = ''  }, right_padding = 2 },
+      --{ 'mode', separator = { left = '', right = ''  }, right_padding = 2 },
     },
     lualine_b = {  'branch', {
         		'filename',
@@ -79,9 +95,11 @@ require('lualine').setup {
       		} },
     lualine_c = { 'fileformat' },
     lualine_x = {},
-    lualine_y = { 'filetype', diff , diagnostics},
-    lualine_z = {
+    lualine_y = { 'filetype', diff , diagnostics, 
+
       'location' , { 'progress', separator = { right = ''  }, left_padding = 2 }
+    },
+    lualine_z = {
     },
   },
   inactive_sections = {
