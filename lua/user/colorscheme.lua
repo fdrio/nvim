@@ -2,10 +2,10 @@ require('nightfox').setup({
   options = {
 	transparent = true,
     styles = {
-	  comments = "italic",
+	  --comments = "italic",
       keywords = "bold",
       types = "bold",
-	  functions = "bold",
+	  --functions = "bold",
     }
   }
 })
