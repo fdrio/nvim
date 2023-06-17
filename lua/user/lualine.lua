@@ -52,12 +52,12 @@ local bubbles_theme = {
     c = { fg = colors.grey, bg = colors.grey },
   },
 
-  insert = { a = { fg = colors.pink, bg = colors.grey },
-    b = { fg = colors.red, bg = colors.black },
+  insert = { a = { fg = colors.white, bg = colors.grey },
+    b = { fg = colors.green, bg = colors.black },
     c = { fg = colors.black, bg = colors.black },
     },
   visual = { a = { fg = colors.white, bg = colors.grey }, 
-    b = { fg = colors.lightgreen, bg = colors.black },
+    b = { fg = colors.cyan, bg = colors.black },
     c = { fg = colors.black, bg = colors.black },
 
   },
