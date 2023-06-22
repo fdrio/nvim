@@ -13,15 +13,18 @@ local hide_in_width = function()
 end
 local colors = {
   darkblue = '#005577',
-  green =  '#007c1b',
+  darkgreen = '#29623b',
+  green =  '#2c8949',
   lightgreen = '#00c161',
   yellow = '#f4bb40',
   blue   = '#80a0ff',
+  darkcyan = '#245758',
   cyan   = '#79dac8',
   black  = '#080808',
   white  = '#c6c6c6',
   red    = '#ff5189',
   violet = '#d183e8',
+  wine   = '#542a68',
   grey   = '#303030',
   pink   = '#dc0056',
 }
@@ -47,18 +50,19 @@ local diagnostics = {
 
 local bubbles_theme = {
   normal = {
-    a = { fg = colors.white, bg = colors.darkblue },
-    b = { fg = colors.white, bg = colors.grey },
-    c = { fg = colors.grey, bg = colors.grey },
+    a = { fg = colors.darkblue, bg = colors.darkblue },
+    b = { fg = colors.white, bg = colors.darkblue },
+    c = { fg = colors.darkblue, bg = colors.darkblue},
   },
 
-  insert = { a = { fg = colors.white, bg = colors.grey },
-    b = { fg = colors.green, bg = colors.black },
-    c = { fg = colors.black, bg = colors.black },
+  insert = { a = { fg = colors.wine, bg = colors.grey },
+    b = { fg = colors.white, bg = colors.wine },
+    c = { fg = colors.wine, bg = colors.wine },
     },
-  visual = { a = { fg = colors.white, bg = colors.grey }, 
-    b = { fg = colors.cyan, bg = colors.black },
-    c = { fg = colors.black, bg = colors.black },
+
+  visual = { a = { fg = colors.green, bg = colors.grey }, 
+    b = { fg = colors.white, bg = colors.green },
+    c = { fg = colors.green, bg = colors.green},
 
   },
   replace = { a = { fg = colors.white, bg = colors.grey },
@@ -67,8 +71,8 @@ local bubbles_theme = {
 
   },
   command = { a = { fg = colors.white, bg = colors.grey },
-    b = { fg = colors.yellow, bg = colors.black },
-    c = { fg = colors.black, bg = colors.black },
+    b = { fg = colors.white, bg = colors.darkcyan },
+    c = { fg = colors.darkcyan, bg = colors.darkcyan },
 
   },
   inactive = {
