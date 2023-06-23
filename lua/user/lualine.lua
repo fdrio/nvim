@@ -13,9 +13,8 @@ local hide_in_width = function()
 end
 local colors = {
   darkblue = '#005577',
-  darkgreen = '#29623b',
+  darkgreen = '#027220',
   green =  '#2c8949',
-  lightgreen = '#00c161',
   yellow = '#f4bb40',
   blue   = '#80a0ff',
   darkcyan = '#245758',
@@ -27,6 +26,7 @@ local colors = {
   wine   = '#542a68',
   grey   = '#303030',
   pink   = '#dc0056',
+  purple = '#0000CD'
 }
 
 local diff = {
@@ -60,9 +60,9 @@ local bubbles_theme = {
     c = { fg = colors.wine, bg = colors.wine },
     },
 
-  visual = { a = { fg = colors.green, bg = colors.grey }, 
-    b = { fg = colors.white, bg = colors.green },
-    c = { fg = colors.green, bg = colors.green},
+  visual = { a = { fg = colors.darkgreen, bg = colors.grey }, 
+    b = { fg = colors.white, bg = colors.darkgreen },
+    c = { fg = colors.darkgreen, bg = colors.darkgreen},
 
   },
   replace = { a = { fg = colors.white, bg = colors.grey },
@@ -71,8 +71,8 @@ local bubbles_theme = {
 
   },
   command = { a = { fg = colors.white, bg = colors.grey },
-    b = { fg = colors.white, bg = colors.darkcyan },
-    c = { fg = colors.darkcyan, bg = colors.darkcyan },
+    b = { fg = colors.white, bg = colors.darkblue},
+    c = { fg = colors.white, bg = colors.darkblue},
 
   },
   inactive = {
