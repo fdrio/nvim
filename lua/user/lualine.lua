@@ -72,7 +72,7 @@ local bubbles_theme = {
   },
   command = { a = { fg = colors.white, bg = colors.grey },
     b = { fg = colors.white, bg = colors.darkblue},
-    c = { fg = colors.white, bg = colors.darkblue},
+    c = { fg = colors.darkblue, bg = colors.darkblue},
 
   },
   inactive = {
