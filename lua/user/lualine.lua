@@ -24,14 +24,14 @@ local colors = {
   red    = '#ff5189',
   violet = '#d183e8',
   wine   = '#542a68',
-  grey   = '#303030',
+  grey   = '#202020',
   pink   = '#dc0056',
   purple = '#0000CD'
 }
 
 local diff = {
 	"diff",
-	colored = false,
+	colored = true,
 	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
   cond = hide_in_width
 }
@@ -41,7 +41,7 @@ local diagnostics = {
 	sources = { "nvim_diagnostic" },
 	sections = { "error", "warn" },
 	symbols = { error = " ", warn = " " },
-	colored = false,
+	colored = true,
 	update_in_insert = false,
 	always_visible = true,
 }
@@ -50,29 +50,29 @@ local diagnostics = {
 
 local bubbles_theme = {
   normal = {
-    a = { fg = colors.darkblue, bg = colors.darkblue },
-    b = { fg = colors.white, bg = colors.darkblue },
-    c = { fg = colors.darkblue, bg = colors.darkblue},
+    a = { fg = colors.grey, bg = colors.grey},
+    b = { fg = colors.white, bg = colors.grey},
+    c = { fg = colors.grey, bg = colors.grey},
   },
 
-  insert = { a = { fg = colors.wine, bg = colors.grey },
-    b = { fg = colors.white, bg = colors.wine },
-    c = { fg = colors.wine, bg = colors.wine },
+  insert = { a = { fg = colors.white, bg = colors.grey },
+    b = { fg = colors.white, bg = colors.grey },
+    c = { fg = colors.grey, bg = colors.grey },
     },
 
-  visual = { a = { fg = colors.darkgreen, bg = colors.grey }, 
-    b = { fg = colors.white, bg = colors.darkgreen },
-    c = { fg = colors.darkgreen, bg = colors.darkgreen},
+  visual = { a = { fg = colors.white, bg = colors.grey }, 
+    b = { fg = colors.white, bg = colors.grey },
+    c = { fg = colors.grey, bg = colors.grey},
 
   },
   replace = { a = { fg = colors.white, bg = colors.grey },
-    b = { fg = colors.cyan, bg = colors.black },
-    c = { fg = colors.black, bg = colors.black },
+    b = { fg = colors.white, bg = colors.grey },
+    c = { fg = colors.black, bg = colors.grey },
 
   },
   command = { a = { fg = colors.white, bg = colors.grey },
-    b = { fg = colors.white, bg = colors.darkblue},
-    c = { fg = colors.darkblue, bg = colors.darkblue},
+    b = { fg = colors.white, bg = colors.grey},
+    c = { fg = colors.grey, bg = colors.grey},
 
   },
   inactive = {
@@ -85,7 +85,7 @@ local bubbles_theme = {
 require('lualine').setup {
   options = {
     theme = bubbles_theme,
-    component_separators = '|',
+    component_separators = '▎',
     section_separators = { left = '', right = '' },
   },
   sections = {
@@ -101,7 +101,7 @@ require('lualine').setup {
     lualine_x = {},
     lualine_y = { 'filetype', diff , diagnostics, 
 
-      'location' , { 'progress', separator = { right = ''  }, left_padding = 2 }
+      'location' , { 'progress', separator = { right = '▎'  }, left_padding = 2 }
     },
     lualine_z = {
     },
