@@ -46,7 +46,10 @@ local diagnostics = {
 	always_visible = true,
 }
 
-
+local branch = {
+    "branch", 
+    color = {fg=colors.cyan, gui="bold"}
+}
 
 local bubbles_theme = {
   normal = {
@@ -92,14 +95,15 @@ require('lualine').setup {
     lualine_a = {
       --{ 'mode', separator = { left = '', right = ''  }, right_padding = 2 },
     },
-    lualine_b = {  'branch', {
+    lualine_b = {  branch, {
         		'filename',
         		file_status = true, -- displays file status (readonly status, modified status)
+                color = {fg=colors.blue, gui="bold"},
         		path = 2 -- 0 = just filename, 1 = relative path, 2 = absolute path
       		} },
     lualine_c = { 'fileformat' },
     lualine_x = {},
-    lualine_y = { 'filetype', diff , diagnostics, 
+    lualine_y = { {'filetype', color = {fg=colors.blue, gui="bold"}}, diff , diagnostics, 
 
       'location' , { 'progress', separator = { right = '▎'  }, left_padding = 2 }
     },
