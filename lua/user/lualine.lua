@@ -103,9 +103,9 @@ require('lualine').setup {
       		} },
     lualine_c = { 'fileformat' },
     lualine_x = {},
-    lualine_y = { {'filetype', color = {fg=colors.blue, gui="bold"}}, diff , diagnostics, 
+    lualine_y = { {'filetype', color = {fg=colors.white, gui="bold"}}, diff , diagnostics, 
 
-      'location' , { 'progress', separator = { right = '▎'  }, left_padding = 2 }
+            {'location', color = {fg=colors.yellow}} , { 'progress', separator = { right = '▎'  }, color = {fg=colors.white, gui="bold"}, left_padding = 2 }
     },
     lualine_z = {
     },
