@@ -61,9 +61,9 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Git Chunks --
-keymap("n", "nc", ":Gitsigns next_hunk", opts)
-keymap("n", "pc", ":Gitsigns prev_hunk", opts)
-keymap("n", "fc", ":Gitsigns preview_hunk", opts)
+keymap("n", "nc", ":Gitsigns next_hunk<CR>", opts)
+keymap("n", "pc", ":Gitsigns prev_hunk<CR>", opts)
+keymap("n", "fc", ":Gitsigns preview_hunk<CR>", opts)
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
