@@ -56,16 +56,8 @@ return packer.startup(function(use)
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim"})
 	use({ "ahmedkhalf/project.nvim"})
-	use({ "lewis6991/impatient.nvim"})
 	use({ "lukas-reineke/indent-blankline.nvim"})
 	use("folke/which-key.nvim")
-
--- Markdown 
--- install without yarn or npm
-  use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  })
 
 	-- Colorschemes
 	use "EdenEast/nightfox.nvim" 
@@ -85,8 +77,6 @@ return packer.startup(function(use)
 	-- LSP
 	use({ "neovim/nvim-lspconfig"}) -- enable LSP
 	use { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" }
-  --use({ "williamboman/nvim-lsp-installer"}) -- simple to use language server installer
-	use({ "jose-elias-alvarez/null-ls.nvim"}) -- for formatters and linters
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim"})
