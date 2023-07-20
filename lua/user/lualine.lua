@@ -105,7 +105,7 @@ require('lualine').setup {
     lualine_x = {},
     lualine_y = { {'filetype', color = {fg=colors.white, gui="bold"}}, diff , diagnostics, 
 
-            {'location', color = {fg=colors.white}} , { 'progress', color = {fg=colors.white, gui="bold"}, left_padding = 2 }
+            {'location', color = {fg=colors.white, gui="bold"}} , { 'progress', color = {fg=colors.white, gui="bold"}, left_padding = 2 }
     },
     lualine_z = {
     },
