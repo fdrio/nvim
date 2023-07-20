@@ -88,7 +88,7 @@ local bubbles_theme = {
 require('lualine').setup {
   options = {
     theme = bubbles_theme,
-    component_separators = '▎',
+    component_separators = '',
     section_separators = { left = '', right = '' },
   },
   sections = {
@@ -98,14 +98,14 @@ require('lualine').setup {
     lualine_b = {  branch, {
         		'filename',
         		file_status = true, -- displays file status (readonly status, modified status)
-                color = {fg=colors.blue, gui="bold"},
+                color = {fg=colors.white, gui="bold"},
         		path = 2 -- 0 = just filename, 1 = relative path, 2 = absolute path
       		} },
     lualine_c = { 'fileformat' },
     lualine_x = {},
     lualine_y = { {'filetype', color = {fg=colors.white, gui="bold"}}, diff , diagnostics, 
 
-            {'location', color = {fg=colors.yellow}} , { 'progress', separator = { right = '▎'  }, color = {fg=colors.white, gui="bold"}, left_padding = 2 }
+            {'location', color = {fg=colors.white}} , { 'progress', color = {fg=colors.white, gui="bold"}, left_padding = 2 }
     },
     lualine_z = {
     },
