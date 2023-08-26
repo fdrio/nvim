@@ -16,6 +16,12 @@ require("lazy").setup({
           's1n7ax/nvim-search-and-replace',
           config = function() require'nvim-search-and-replace'.setup() end,
     },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreview" },
+        ft = { "markdown" },
+        build = "cd app && npm install",
+    },
     {"mg979/vim-visual-multi"},
 	{ "nvim-lua/plenary.nvim"}, -- Useful lua functions used by lots of plugins
 	{ "windwp/nvim-autopairs"}, -- Autopairs, integrates with both cmp and treesitter
