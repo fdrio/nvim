@@ -22,6 +22,7 @@ require("lazy").setup({
         ft = { "markdown" },
         build = "cd app && npm install",
     },
+    {'ishan9299/modus-theme-vim'}, 
     {"mg979/vim-visual-multi"},
 	{ "nvim-lua/plenary.nvim"}, -- Useful lua functions used by lots of plugins
 	{ "windwp/nvim-autopairs"}, -- Autopairs, integrates with both cmp and treesitter
