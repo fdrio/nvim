@@ -30,7 +30,7 @@ require("lazy").setup({
 	{ "nvim-lualine/lualine.nvim" },
 	{ "akinsho/toggleterm.nvim"},
 	{ "ahmedkhalf/project.nvim"},
-	{ "lukas-reineke/indent-blankline.nvim"},
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {}},
 	"folke/which-key.nvim",
 
 	-- Colorschemes
