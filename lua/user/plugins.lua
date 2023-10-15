@@ -18,9 +18,7 @@ require("lazy").setup({
     },
     {
         "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreview" },
-        ft = { "markdown" },
-        build = "cd app && npm install",
+        run = function() vim.fn["mkdp#util#install"]() end,
     },
     {'ishan9299/modus-theme-vim'}, 
     {"mg979/vim-visual-multi"},
