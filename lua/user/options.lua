@@ -44,3 +44,15 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+-- LaTex options
+vim.g.vimtex_compiler_method = 'latexmk'
+vim.g.vimtex_compiler_latexmk = {
+    options = {
+        '-pdf',
+        '-shell-escape',
+        '-verbose',
+        '-file-line-error',
+        '-synctex=1',
+        '-interaction=nonstopmode',
+    }
+}
