@@ -64,6 +64,27 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "nc", ":Gitsigns next_hunk<CR>", opts)
 keymap("n", "pc", ":Gitsigns prev_hunk<CR>", opts)
 keymap("n", "fc", ":Gitsigns preview_hunk<CR>", opts)
+
+-- LaTex Keymaps --
+-- Toggle the main PDF viewer
+keymap("n", "<leader>lv", ":VimtexView<CR>", opts)
+
+-- Compile the LaTeX file
+keymap("n", "<leader>lc", ":VimtexCompile<CR>", opts)
+
+-- Stop the compilation
+keymap("n", "<leader>lk", ":VimtexStop<CR>", opts)
+
+-- Toggle the table of contents
+keymap("n", "<leader>lo", ":VimtexTocToggle<CR>", opts)
+
+-- Toggle forward search
+keymap("n", "<leader>ls", ":VimtexSearch<CR>", opts)
+
+-- Clean auxiliary files
+keymap("n", "<leader>lC", ":VimtexClean<CR>", opts)
+
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
