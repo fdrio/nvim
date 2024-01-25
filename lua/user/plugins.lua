@@ -20,7 +20,6 @@ require("lazy").setup({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     },
-    {'ishan9299/modus-theme-vim'}, 
     {"mg979/vim-visual-multi"},
 	{ "nvim-lua/plenary.nvim"}, -- Useful lua functions used by lots of plugins
 	{ "windwp/nvim-autopairs"}, -- Autopairs, integrates with both cmp and treesitter
@@ -32,7 +31,8 @@ require("lazy").setup({
 	"folke/which-key.nvim",
 
 	-- Colorschemes
-	"EdenEast/nightfox.nvim", 
+	"EdenEast/nightfox.nvim",
+    { "miikanissi/modus-themes.nvim", priority = 1000 },
   -- cmp plugins
 	{ "hrsh7th/nvim-cmp"}, -- The completion plugin
 	{ "hrsh7th/cmp-buffer"}, -- buffer completions

@@ -6,6 +6,10 @@ update_focused_file = {
 	},
   renderer = {
     root_folder_modifier = ":t",
+    symlink_destination = false,
+    indent_markers = {
+        enable = true,
+    },
     icons = {
       glyphs = {
         default = "",
@@ -45,7 +49,7 @@ update_focused_file = {
   view = {
 --    width = 30,
 --    height = 30,
-      side = "right",
+      side = "left",
     },
 }
 --local status_ok, nvim_tree = pcall(require, "nvim-tree")
