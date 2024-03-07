@@ -18,7 +18,9 @@ require("lazy").setup({
     },
     {
         "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
     },
     {"mg979/vim-visual-multi"},
 	{ "nvim-lua/plenary.nvim"}, -- Useful lua functions used by lots of plugins
@@ -70,7 +72,12 @@ require("lazy").setup({
 
 
     -- Latex
-    {'lervag/vimtex'},
+    {
+      "lervag/vimtex",
+      init = function()
+        -- Use init for configuration, don't use the more common "config".
+      end
+    }
 
 })
 
