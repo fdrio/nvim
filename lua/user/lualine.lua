@@ -95,7 +95,7 @@ require('lualine').setup {
     lualine_a = {
       --{ 'mode', separator = { left = '', right = ''  }, right_padding = 2 },
     },
-    lualine_b = {  branch, {
+    lualine_b = {  branch, diff,{
         		'filename',
         		file_status = true, -- displays file status (readonly status, modified status)
                 color = {fg=colors.white},
@@ -103,7 +103,7 @@ require('lualine').setup {
       		} },
     lualine_c = { 'fileformat' },
     lualine_x = {},
-    lualine_y = { {'filetype', color = {fg=colors.white, gui="bold"}}, diff , diagnostics, 
+    lualine_y = { {'filetype', color = {fg=colors.white, gui="bold"}}, diagnostics, 
 
             {'location', color = {fg=colors.white, gui="bold"}} , { 'progress', color = {fg=colors.white, gui="bold"}, left_padding = 2 }
     },
