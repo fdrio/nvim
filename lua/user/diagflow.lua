@@ -16,11 +16,11 @@ require('diagflow').setup({
     padding_top = 0,
     padding_right = 0,
     text_align = 'right', -- 'left', 'right'
-    placement = 'inline', -- 'top', 'inline'
+    placement = 'top', -- 'top', 'inline'
     inline_padding_left = 0, -- the padding left when the placement is inline
     update_event = { 'DiagnosticChanged', 'BufReadPost' }, -- the event that updates the diagnostics cache
-    toggle_event = { }, -- if InsertEnter, can toggle the diagnostics on inserts
-    show_sign = false, -- set to true if you want to render the diagnostic sign before the diagnostic message
+    toggle_event = {'InsertEnter'}, -- if InsertEnter, can toggle the diagnostics on inserts
+    show_sign = true, -- set to true if you want to render the diagnostic sign before the diagnostic message
     render_event = { 'DiagnosticChanged', 'CursorMoved' },
     border_chars = {
       top_left = "┌",

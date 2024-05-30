@@ -34,11 +34,16 @@ require("lazy").setup({
 
 	-- Colorschemes
 	"EdenEast/nightfox.nvim",
-    "miikanissi/modus-themes.nvim",
+    "Mofiqul/vscode.nvim",
+    {
+        "fdrio/modus-themes.nvim", 
+        branch="dev",
+    },
   -- cmp plugins
 	{ "hrsh7th/nvim-cmp"}, -- The completion plugin
 	{ "hrsh7th/cmp-buffer"}, -- buffer completions
 	{ "hrsh7th/cmp-path"}, -- path completions
+    {"f3fora/cmp-spell"},
 	{ "saadparwaiz1/cmp_luasnip"}, -- snippet completions
 	{ "hrsh7th/cmp-nvim-lsp"},
     {'dgagn/diagflow.nvim'},

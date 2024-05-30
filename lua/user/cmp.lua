@@ -114,6 +114,16 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    {
+      name = "spell",
+      option = {
+            keep_all_entries = false,
+            enable_in_context = function()
+                return true
+            end,
+            preselect_correct_word = true,
+      },
+    },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
