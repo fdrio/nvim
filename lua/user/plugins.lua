@@ -53,6 +53,14 @@ require("lazy").setup({
 	{ "neovim/nvim-lspconfig"}, -- enable LSP
 	{ "williamboman/mason.nvim"}, 
     {"williamboman/mason-lspconfig.nvim" },
+    {
+        "MysticalDevil/inlay-hints.nvim",
+        event = "LspAttach",
+        dependencies = { "neovim/nvim-lspconfig" },
+        config = function()
+            require("inlay-hints").setup()
+        end
+    },
 
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim"},
