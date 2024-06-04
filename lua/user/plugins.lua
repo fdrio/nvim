@@ -41,7 +41,8 @@ require("lazy").setup({
     {"f3fora/cmp-spell"},
 	{ "saadparwaiz1/cmp_luasnip"}, -- snippet completions
 	{ "hrsh7th/cmp-nvim-lsp"},
-    {'dgagn/diagflow.nvim'},
+    {"hrsh7th/cmp-nvim-lsp-signature-help"},
+    {"dgagn/diagflow.nvim"},
 	{ "hrsh7th/cmp-nvim-lua"},
   -- Colorizer
     {"norcalli/nvim-colorizer.lua"},
@@ -78,7 +79,6 @@ require("lazy").setup({
 	-- Git
 	{ "lewis6991/gitsigns.nvim" },
     {'tpope/vim-fugitive'},
-
 
     -- Latex
     {
