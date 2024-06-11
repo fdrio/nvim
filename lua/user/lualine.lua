@@ -58,14 +58,14 @@ local bubbles_theme = {
     c = { fg = colors.grey, bg = colors.grey},
   },
 
-  insert = { a = { fg = colors.white, bg = colors.darkgreen },
-    b = { fg = colors.white, bg = colors.darkgreen },
-    c = { fg = colors.darkgreen, bg = colors.darkgreen },
+  insert = { a = { fg = colors.white, bg = colors.grey },
+    b = { fg = colors.white, bg = colors.grey },
+    c = { fg = colors.grey, bg = colors.grey },
     },
 
-  visual = { a = { fg = colors.white, bg = colors.wine }, 
-    b = { fg = colors.white, bg = colors.wine },
-    c = { fg = colors.wine, bg = colors.wine},
+  visual = { a = { fg = colors.white, bg = colors.grey }, 
+    b = { fg = colors.white, bg = colors.grey },
+    c = { fg = colors.grey, bg = colors.grey},
 
   },
   replace = { a = { fg = colors.white, bg = colors.grey },
@@ -73,9 +73,9 @@ local bubbles_theme = {
     c = { fg = colors.black, bg = colors.grey },
 
   },
-  command = { a = { fg = colors.white, bg = colors.darkblue },
-    b = { fg = colors.white, bg = colors.darkblue},
-    c = { fg = colors.darkblue, bg = colors.darkblue},
+  command = { a = { fg = colors.white, bg = colors.grey },
+    b = { fg = colors.white, bg = colors.grey},
+    c = { fg = colors.grey, bg = colors.grey},
 
   },
   inactive = {
